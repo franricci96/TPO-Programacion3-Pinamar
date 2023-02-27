@@ -1,4 +1,4 @@
-package implementaciones;
+package algoritmos;
 
 public interface Dijkstra {
 
