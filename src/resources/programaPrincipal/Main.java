@@ -1,4 +1,4 @@
-package programaPrincipal;
+package resources.programaPrincipal;
 
 public class Main {
 
