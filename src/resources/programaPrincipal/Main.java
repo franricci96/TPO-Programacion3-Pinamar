@@ -40,38 +40,24 @@ public class Main {
 		GrafoTDA graph = new GrafoEstatico();
 		graph.InicializarGrafo();
 		
+		int verticeInicial = 1;
+		
 		// APLICA DIJKSTRA A UN OBJETO DIJKSTRA
-		graph = d.dijkstra(grafo, 1);
-		// CREA EL CONJUNTO
+		graph = d.dijkstra(grafo, verticeInicial);
+		// CREA EL CONJUNTO PARA PODER IMPRIMIRLO LUEGO PODER PRINTEAR 
 		ConjuntoTDA vertices = new ConjuntoEstatico();
 		vertices.InicializarConjunto();
 		// COPIA LOS VERTICES DENTRO DE UN GRAFO
-		copiarConjuntos(graph.Vertices(), vertices);
+		vertices = graph.Vertices();
 		
 		
 		// LO MUESTRA POR PANTALLA
 		while(!vertices.ConjuntoVacio()) {
 			int elem = vertices.Elegir();
-			System.out.println("V:1 -----"+graph.PesoArista(1, elem)+"-----> "+elem);
+			System.out.println("Vertice inicial: "+ verticeInicial +  " ----- Costo: "+graph.PesoArista(1, elem)+"-----> Vertice de llegada: "+elem);
 			vertices.Sacar(elem);
 		}
 	}
 
-	public static void copiarConjuntos(ConjuntoTDA a, ConjuntoTDA b) {
-		ConjuntoTDA auxA = new ConjuntoEstatico();
-		auxA.InicializarConjunto();
-		
-		while(!a.ConjuntoVacio()) {
-			int elem = a.Elegir();
-			auxA.Agregar(elem);
-			a.Sacar(elem);
-		}
-		
-		while(!auxA.ConjuntoVacio()){
-			int elem = auxA.Elegir();
-			a.Agregar(elem);
-			b.Agregar(elem);
-			auxA.Sacar(elem);
-		}
-	}
+
 }
