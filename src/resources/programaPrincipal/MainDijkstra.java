@@ -7,7 +7,7 @@ import resources.interfaces.ConjuntoTDA;
 import resources.interfaces.GrafoTDA;
 
 
-public class Main {
+public class MainDijkstra {
 
 	public static void main(String[] args) {
 		
