@@ -24,4 +24,8 @@ Usted va a recibir la Clase Grafo en Java y deberá implementar 3 (tres) de los 
 
 Tenga en cuenta la representación del grafo (dinámica o estática) para la implementación de los algoritmos elegidos.
 
+## - Algoritmo de Dijsktra
+
+El algoritmo 
+
 #### Nota: Todos los archivos de configuración, ejemplos de entrada y cualquier otro recurso deben ser anexados al proyecto dentro de una carpeta /resources
