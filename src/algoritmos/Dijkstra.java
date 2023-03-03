@@ -4,8 +4,12 @@ import resources.implementaciones.ConjuntoEstatico;
 import resources.interfaces.ConjuntoTDA;
 import resources.implementaciones.GrafoEstatico;
 import resources.interfaces.GrafoTDA;
+import resources.implementaciones.metodos;
 
 public class Dijkstra {
+	
+	metodos m = new metodos();
+	
 	public GrafoTDA dijkstra(GrafoTDA g, int s) { // Toma como parametro un grafo y un vertice a partir del cual 
 		
 		
@@ -32,7 +36,7 @@ public class Dijkstra {
 		
 		ConjuntoTDA adyA = new ConjuntoEstatico(); //adyacentes al vertice pasado por parametro (s)
 		adyA.InicializarConjunto();
-		adyA = adyacentes(g, s);
+		adyA = m.Adyacentes(g, s);
 		
 		//agrego las aristas entre el vertice pasado por parametro y sus adyacentes, al grafo auxiliar
 		while(!adyA.ConjuntoVacio()) {
@@ -53,7 +57,7 @@ public class Dijkstra {
 		//adyacentes a vertice_parametro
 		ConjuntoTDA ady = new ConjuntoEstatico(); 
 		ady.InicializarConjunto();
-		ady = adyacentes(grafoAux, s);
+		ady = m.Adyacentes(grafoAux, s);
 		
 		//comienzo a llenar el grafo auxiliar con las aristas que correspondan a dijkstra
 		while(!pendientes.ConjuntoVacio() && !ady.ConjuntoVacio()) {
@@ -98,28 +102,7 @@ public class Dijkstra {
 		}
 		return grafoAux;
 	}
-	
-	// funcion adyacentes utilizada para encontrar todos los vertices que tienen conexión con uno dado por parametro.
-	public ConjuntoTDA adyacentes(GrafoTDA grafo, int nodoAct) {
-	     ConjuntoTDA vertices = new ConjuntoEstatico(); 
-	     vertices.InicializarConjunto();
-	     ConjuntoTDA vAdyacentes = new ConjuntoEstatico(); 
-	     vAdyacentes.InicializarConjunto();
-	     vertices = grafo.Vertices();
-	     if (vertices.Pertenece(nodoAct)){
-	           vertices.Sacar(nodoAct);
-	     while (!vertices.ConjuntoVacio()){
-	             int vertice = vertices.Elegir();
-	             vertices.Sacar(vertice);
-	             if (grafo.ExisteArista(nodoAct, vertice)) {
-	                  vAdyacentes.Agregar(vertice);
-	            }
-	               
-	            }
-	        }
-	        return vAdyacentes;
-	}
-	
+		
 	// Funcion auxiliar para llevar lo contenido de un conjunto a otro.
 	public void copiarConjuntos(ConjuntoTDA a, ConjuntoTDA b) {
 		ConjuntoTDA auxA = new ConjuntoEstatico();
