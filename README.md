@@ -15,19 +15,19 @@ El trabajo se puede realizar en grupo de hasta 2 personas o individual.
 
 Usted va a recibir la Clase Grafo en Java y deberá implementar 3 (tres) de los siguientes algoritmos:
 
-- [x] Algoritmo Breadth-First Search (BFS)
-- [x] Algoritmo Depth-First Search (DFS)
-- [x] Algoritmo de Prim
-- Algoritmo de Kruskal
-- Algoritmo de Dijsktra
-- Algoritmo de Floyd
+- [x] Algoritmo Breadth-First Search (BFS)
+- [x] Algoritmo Depth-First Search (DFS)
+- []Algoritmo de Prim
+- []Algoritmo de Kruskal
+- [x] Algoritmo de Dijsktra
+- [] Algoritmo de Floyd
 
-Tenga en cuenta la representación del grafo (dinámica o estática) para la implementación de los algoritmos elegidos.
+Tenga en cuenta la representación del grafo (dinámica o estática) para la implementación de los algoritmos elegidos.
 
 ## - Algoritmo de Dijsktra
 
 El algoritmo Dijkstra se utiliza para calcular el camino de menos costo partiendo desde un vertice ingresado por parametro.
 Se apoya en la funcion adyasentes, a partir de la cual obtiene los vertices a los cuales se puede llegar a partir del vertice actual.
-Guarda todos los vertices en un conjunto y luego va sacando uno por uno. Cuando itera los vertices, obtiene los adyasentes del mismo y actualiza (si se tiene un menor costo) la distancia de partir desde el vertice original hasta el vertice en cuesti�n y el padre del mismo hasta que se queda con el conjunto vacio. 
+Guarda todos los vertices en un conjunto y luego va sacando uno por uno. Cuando itera los vertices, obtiene los adyasentes del mismo y actualiza (si se tiene un menor costo) la distancia de partir desde el vertice original hasta el vertice en cuesti�n y el padre del mismo hasta que se queda con el conjunto vacio.
 
 #### Nota: Todos los archivos de configuración, ejemplos de entrada y cualquier otro recurso deben ser anexados al proyecto dentro de una carpeta /resources
