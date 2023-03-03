@@ -26,6 +26,10 @@ Tenga en cuenta la representación del grafo (dinámica o estática) para la imp
 
 ## - Algoritmo de Dijsktra
 
-El algoritmo 
+
+## - Algoritmo de DFS(Depth First Search)
+
+Comienza la búsqueda por un nodo, toma los adyacentes, a partir de uno de ellos realiza a su vez la búsqueda en profundidad para el mismo. Cuando termina la búsqueda para ese adyacente continúa con el siguiente.
+
 
 #### Nota: Todos los archivos de configuración, ejemplos de entrada y cualquier otro recurso deben ser anexados al proyecto dentro de una carpeta /resources
