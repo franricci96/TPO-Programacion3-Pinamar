@@ -29,4 +29,16 @@ public class metodos {
         }
         return vAdyacentes;
     }
+
+    // metodo q cuenta la cantidad valores en un conjunto
+    public static int cantidadVertices(ConjuntoTDA c) {
+
+        int i = 0;
+        while (!c.ConjuntoVacio()) {
+            c.Sacar(c.Elegir());
+            i++;
+        }
+        return i;
+    }
+
 }
